@@ -9,7 +9,7 @@ The user enters the path to the file and selects the conversion format. As a res
 1. Run JYConverter.exe
    
 2. Paste a link to your file
-
+   [addlink](https://github.com/RedrikShuhartRed/json_yaml_converter/blob/main/add%20link.png
 3. Select conversion type
 
 4. Get the file from the link, file name, your file + conversion result type (Json or Yaml)
