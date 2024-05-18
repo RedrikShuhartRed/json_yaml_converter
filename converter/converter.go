@@ -13,14 +13,14 @@ func JsonToYaml(jsonData []byte) ([]byte, error) {
 
 	err := json.Unmarshal(jsonData, &data)
 	if err != nil {
-		log.Printf("error %s", err)
+		log.Printf("error unmarshal json file: %s\n", err)
 		return nil, err
 	}
 
 	yamlData, err := yaml.Marshal(data)
 
 	if err != nil {
-		log.Printf("error %s", err)
+		log.Printf("error marshal yaml: %s\n", err)
 		return nil, err
 	}
 
@@ -34,14 +34,14 @@ func YamlToJson(yamlData []byte) ([]byte, error) {
 
 	err := yaml.Unmarshal(yamlData, &data)
 	if err != nil {
-		log.Printf("error %s", err)
+		log.Printf("error unmarshal yaml file: %s\n", err)
 		return nil, err
 	}
 
-	jsonData, err := json.Marshal(data)
+	jsonData, err := json.MarshalIndent(data, "", "   ")
 
 	if err != nil {
-		log.Printf("error %s", err)
+		log.Printf("error marshalIndent json: %s\n", err)
 		return nil, err
 	}
 
